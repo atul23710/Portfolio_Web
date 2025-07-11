@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+const VITE_SERVICE_ID = import.meta.env.VITE_SERVICE_ID; 
+const VITE_TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const VITE_PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,10 +19,10 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        VITE_SERVICE_ID,
+        VITE_TEMPLATE_ID,
         e.target,
-        import.meta.env.VITE_PUBLIC_KEY
+        VITE_PUBLIC_KEY
       )
       .then((result) => {
         alert("Message Sent!");
@@ -90,6 +95,47 @@ export const Contact = () => {
               Send Message
             </button>
           </form>
+        </div>
+        <div id="social_icons">
+          <div className="button">
+            <a
+              href="https://www.linkedin.com/in/atul-yadav23710/"
+              className="icon linkedin"
+            >
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
+            <span id="linkedin">
+              <a href="https://www.linkedin.com/in/atul-yadav23710/">
+                {" "}
+                Linkedin
+              </a>
+            </span>
+          </div>
+          <div className="button">
+            <a
+              href="https://github.com/atul23710"
+              className="icon github dark:text-black text-white"
+            >
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <span id="github">
+              <a href="https://github.com/atul23710">Github</a>
+            </span>
+          </div>
+          <div className="button">
+            <a
+              href="https://www.instagram.com/atul_23710/profilecard/?igsh=enc3MDg5MmFjY2d4"
+              className="icon instagram"
+            >
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+
+            <span id="instagram">
+              <a href="https://www.instagram.com/atul_23710/profilecard/?igsh=enc3MDg5MmFjY2d4">
+                Instagram
+              </a>
+            </span>
+          </div>
         </div>
       </RevealOnScroll>
     </section>

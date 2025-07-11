@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap');
+@import "tailwindcss";
+
+#social_icons{
+    display:flex;
+    align-items:center;
+    box-sizing: content-box;
+    justify-content: center;
+}
+.fa-brands{
+    color:black;
+}
+#social_icons .button{ 
+    display: flex;
+    align-items: center;
+    height:2.8rem;
+    width:2.8rem;
+    margin:0 0.6rem;
+    padding:0.2rem;
+    background-color: #5e5858;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+#social_icons .button:hover{
+    width:9rem;
+    border-radius: 1.8rem;
+    transform: scale(1.05);
+    .icon .fa-linkedin{
+        border-radius: 40%;
+        color:rgb(0, 128, 255);
+    }
+    #linkedin{
+        color:rgb(0, 128, 255);
+    }
+
+    .icon .fa-instagram{
+        border-radius: 40%;
+        color:rgb(255, 4, 0);
+        
+    }
+    #instagram{
+        color:rgb(0, 128, 255);
+    }
+    #github{
+        color:rgb(0, 128, 255);
+    }
+    #twitter{
+        color:rgb(0, 128, 255);
+    }
+}
+#social_icons .button .icon{
+    display:flex;
+    color:black;
+    height:2rem;
+    width:2rem;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: content-box;
+    line-height: 0rem;
+    padding-left:0.2rem;
+}
+#social_icons .button .icon {
+    font-size: 2rem;
+    line-height:2.5rem;
+    padding-left: 0.3rem;
+    text-align: center;
+}
+#social_icons .button span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    height:1rem;
+    line-height: 1.2rem;
+}
